@@ -1,0 +1,2 @@
+# stratorder
+Quantifying stratigraphic order
