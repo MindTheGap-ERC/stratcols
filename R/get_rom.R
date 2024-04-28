@@ -1,4 +1,5 @@
 get_rom = function(s){
+  #' @export
   #' @title runs order metric by Burgess (2016)
   #'
   #' @param s stratigraphic column

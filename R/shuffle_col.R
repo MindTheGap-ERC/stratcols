@@ -1,4 +1,5 @@
 shuffle_col = function(s, allow_rep = TRUE){
+  #' @export
   #' @title rearrange stratigraphic column
   #'
   #' @param s a stratcol object

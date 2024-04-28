@@ -4,7 +4,7 @@
 \alias{as_stratcol}
 \title{define stratigraphic columns object}
 \usage{
-as_stratcol(thickness, facies, L_unit = NULL, base = 0)
+as_stratcol(thickness, facies, L_unit = NULL, base = 0, change_names = TRUE)
 }
 \arguments{
 \item{thickness}{bed thicknesses}
@@ -14,10 +14,9 @@ as_stratcol(thickness, facies, L_unit = NULL, base = 0)
 \item{L_unit}{SI unit of bed thickenss}
 
 \item{base}{position of lowest bed}
+
+\item{change_names}{should facies names be changed to start with 1?}
 }
 \description{
-defines an S3 object representing a stratigraphic column.
-}
-\seealso{
-\code{\link[=is_stratcol]{is_stratcol()}} to check for validity
+defines an S3 object representing a stratigraphic column. Facies names will be changed to start with 1 at the bottom of the column
 }

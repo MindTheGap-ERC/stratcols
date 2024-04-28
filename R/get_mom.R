@@ -1,4 +1,5 @@
 get_mom = function(m){
+  #' @export
   #' @title determine markov order metric by Burgess (2016)
   #'
   #' @param m transition matrix

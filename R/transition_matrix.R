@@ -1,9 +1,10 @@
 transition_matrix = function(s){
+  #' @export
   #' @title estimate transition matrix from strat column
   #'
   #' @param s stratcol object
   #'
-  #' @returns a matric
+  #' @returns a matrix
   #'
   n = length(unique(s$fa))
   m = matrix(0, ncol = n, nrow = n)
