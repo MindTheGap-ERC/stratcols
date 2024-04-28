@@ -1,0 +1,59 @@
+---
+title: "stratcols"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{stratcols}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(stratcols)
+```
+
+## Introduction to the stratcols package
+
+`stratcols` is a package with utility functions to handle stratigraphic columns.
+
+## Getting started
+
+Stratigraphic columns are defined using `as_stratcol`:
+
+```{r}
+thickness = runif(10) #bed thicknesses
+facies = rep(c(1,2), 5) # facies codes
+
+s = as_stratcol(thickness = thickness,
+                facies = facies)
+```
+
+`is_stratcol` can be used to test if any object is a valid stratigraphic column:
+
+```{r}
+is_stratcol(s)
+```
+
+## plotting stratigraphic columns
+
+`stratcols` wraps `StratigrapheR` to plot stratigraphic columns. Facies types are interpreted as hardness
+
+```{r}
+plot(s)
+```
+
+## Modifying stratigraphic columns
+
+Facies names can be changed using `rename_facies`:
+
+```{r}
+s2 = rename_facies(s, new_names = c(2,3))
+plot(s2)
+```
+The optional argument `old_names` can be used to replace specific facies.
