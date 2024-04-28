@@ -23,13 +23,20 @@ Then, run
 ```R
 remotes::install_github(repo = "MindTheGap-ERC/stratcols",
                         ref = "HEAD",
-                        dependencies = TRUE)
+                        dependencies = TRUE,
+                        build_vignettes = TRUE)
 ```
 
 After installation, you can load the package using
 
 ```R
 library("stratcols")
+```
+
+Start by reading the vignette, available via
+
+```R
+vignette("stratcols")
 ```
 
 ## License
