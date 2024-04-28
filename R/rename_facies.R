@@ -1,5 +1,6 @@
 rename_facies = function(s, new_names, old_names = NULL){
   #' @title rename facies
+  #' @export
   #'
   #' @param s stratcol object
   #' @param new_names new facies names

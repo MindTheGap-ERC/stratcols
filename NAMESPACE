@@ -3,3 +3,4 @@
 S3method(plot,stratcol)
 export(as_stratcol)
 export(is_stratcol)
+export(rename_facies)
