@@ -14,13 +14,15 @@ shuffle_col = function(s, allow_rep = TRUE){
 shuffle_col.stratcol = function(s, allow_rep = TRUE){
   #' @export
   #'
+  no_beds = stratcols::no_beds(s)
+  thickness = stratcols::bed_thickness(s)
+  facies = stratcols::facies_names(s)
   if (allow_rep == TRUE){
-    perm = sample.int(length(s$fa))
-    thickness = diff(s$bdry)
+    perm = sample.int(no_beds)
     new_thickness = thickness[perm]
-    fa = s$fa[perm]
+    new_fa = facies[perm]
     s2 = as_stratcol(thickness = new_thickness,
-                     facies = fa,
+                     facies = new_fa,
                      L_unit = s$L_unit,
                      base = s$bdry[1])
     return(s2)

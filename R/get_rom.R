@@ -4,12 +4,13 @@ get_rom = function(s){
   #'
   #' @param s stratigraphic column
   #'
-  I = rep(NA, length(s$fa)-1)
+  no_beds = stratcols::no_beds(s)
+  I = rep(NA, no_beds()-1)
   D = I
-  thickness = diff(s$bdry)
+  thickness = stratcols::bed_thickness(s)
   I_counter = 0
   D_counter = 0
-  for (i in seq_len(length(thickness) - 1)){
+  for (i in seq_len(no_beds - 1)){
     is_increasing = thickness[i+1] > thickness[i]
     if (is_increasing){
       I_counter = I_counter + 1
