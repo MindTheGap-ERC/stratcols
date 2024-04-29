@@ -7,7 +7,13 @@ shuffle_col = function(s, allow_rep = TRUE){
   #'
   #' @returns a stratcol object
   #'
+  #'
+  UseMethod("shuffle_col")
+}
 
+shuffle_col.stratcol = function(s, allow_rep = TRUE){
+  #' @export
+  #'
   if (allow_rep == TRUE){
     perm = sample.int(length(s$fa))
     thickness = diff(s$bdry)

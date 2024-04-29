@@ -6,6 +6,13 @@ transition_matrix = function(s){
   #'
   #' @returns a matrix
   #'
+
+  UseMethod("transition_matrix")
+}
+
+transition_matrix.stratcol = function(s){
+  #' @export
+  #'
   n = length(unique(s$fa))
   m = matrix(0, ncol = n, nrow = n)
   for (l in seq_len(length(s$fa)-1)){
@@ -18,6 +25,7 @@ transition_matrix = function(s){
   for (k in seq_len(n)){
     m[k,] = m[k,] /sum(m[k,])
   }
+  class(m) = "fa_tran_mat"
   return(m)
 
 }
