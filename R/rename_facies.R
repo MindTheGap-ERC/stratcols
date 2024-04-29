@@ -12,6 +12,11 @@ rename_facies = function(s, new_names, old_names = NULL){
   #' @returns a stratcol object
   #'
 
+  UseMethod("rename_facies")
+}
+
+rename_facies.stratcol = function(s, new_names, old_names = NULL){
+  #' @export
   if (is.null(old_names)){
     old_names = unique(s$fa)
   }
