@@ -39,6 +39,14 @@ s = as_stratcol(thickness = thickness,
 ```{r}
 is_stratcol(s)
 ```
+Bed thicknesses can be extracted using `bed_thickness`:
+
+```{r}
+bed_thickness(s)
+
+```
+
+
 
 ## plotting stratigraphic columns
 
