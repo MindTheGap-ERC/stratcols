@@ -45,6 +45,18 @@ Bed thicknesses can be extracted using `bed_thickness`:
 bed_thickness(s)
 
 ```
+You can extract (unique) facies names as follows:
+
+```{r}
+facies_names(s)
+unique_facies_names(s)
+```
+Further functionality includes
+
+```{r}
+no_beds(s)
+no_facies(s)
+```
 
 
 
