@@ -18,10 +18,10 @@ rename_facies = function(s, new_names, old_names = NULL){
 rename_facies.stratcol = function(s, new_names, old_names = NULL){
   #' @export
   if (is.null(old_names)){
-    old_names = unique(s$fa)
+    old_names = unique_facies_names.stratcol(s)
   }
 
-  new_fa = rep(NA, length(s$fa))
+  new_fa = rep(NA, no_facies.stratcol(s))
   for ( i in seq_along(old_names)){
     new_fa = replace(new_fa, s$fa == old_names[i], new_names[i])
   }
