@@ -9,14 +9,14 @@ as_stratcol(thickness, facies, L_unit = NULL, base = 0)
 \arguments{
 \item{thickness}{bed thicknesses}
 
-\item{facies}{facies of bed}
+\item{facies}{facies of beds}
 
-\item{L_unit}{SI unit of bed thickenss}
+\item{L_unit}{SI unit of bed thickness}
 
 \item{base}{position of lowest bed}
 }
 \description{
-defines an S3 object representing a stratigraphic column.
+defines an S3 object \code{stratcol} representing a stratigraphic column.
 }
 \seealso{
 \code{\link[=is_stratcol]{is_stratcol()}} to check for validity
