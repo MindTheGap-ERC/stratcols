@@ -1,5 +1,5 @@
 Package: stratcols
-Title: Deal With Stratigraphic Columns
+Title: Plot and Manipulate Stratigraphic Columns
 Version: 0.0.0.9000
 Authors@R: 
     person("Niklas", "Hohmann", , "N.H.Hohmann@uu.nl", role = c("aut", "cre"),
