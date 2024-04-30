@@ -59,6 +59,9 @@ no_facies(s)
 
 get_base(s) # lowest bed boundary
 get_L_unit(s) # length unit of beds
+
+facies_repetitions(s) # do successive beds have identical facies?
+merge_beds(s, mode = "identical facies") # merge successive beds with identical facies
 ```
 
 
