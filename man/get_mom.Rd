@@ -7,7 +7,10 @@
 get_mom(m)
 }
 \arguments{
-\item{m}{transition matrix}
+\item{m}{facies transition matrix}
+}
+\value{
+scalar, the matric order metric
 }
 \description{
 determine markov order metric by Burgess (2016)

@@ -21,10 +21,10 @@ shuffle_col.stratcol = function(s, allow_rep = TRUE){
     perm = sample.int(no_beds)
     new_thickness = thickness[perm]
     new_fa = facies[perm]
-    s2 = as_stratcol(thickness = new_thickness,
-                     facies = new_fa,
-                     L_unit = s$L_unit,
-                     base = s$bdry[1])
+    s2 = stratcols::as_stratcol(thickness = new_thickness,
+                                facies = new_fa,
+                                 L_unit = s$L_unit,
+                                 base = s$bdry[1])
     return(s2)
   }
   if (allow_rep == FALSE){

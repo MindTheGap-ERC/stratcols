@@ -19,7 +19,7 @@ order_facies_names.stratcol = function(s){
   no_facies = length(old_names)
   new_names = seq_len(no_facies)
 
-  new_s = rename_facies(s, new_names = new_names, old_names = old_names)
+  new_s = stratcols::rename_facies(s, new_names = new_names, old_names = old_names)
 
   return(new_s)
 }

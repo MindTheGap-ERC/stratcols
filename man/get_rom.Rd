@@ -4,11 +4,16 @@
 \alias{get_rom}
 \title{runs order metric by Burgess (2016)}
 \usage{
-get_rom(s)
+get_rom(s, strictly = TRUE)
 }
 \arguments{
 \item{s}{stratigraphic column}
+
+\item{strictly}{logical. Does bed thickness need to be stricly increasing (>) or not (>=) to be counted as thickening?}
+}
+\value{
+scalar. The runs order metric (rom)
 }
 \description{
-runs order metric by Burgess (2016)
+Determines the run order metric introduced by Burgess (2016), https://doi.org/10.2110/jsr.2016.10
 }
