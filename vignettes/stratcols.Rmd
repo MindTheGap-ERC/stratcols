@@ -56,6 +56,9 @@ Further functionality includes
 ```{r}
 no_beds(s)
 no_facies(s)
+
+get_base(s) # lowest bed boundary
+get_L_unit(s) # length unit of beds
 ```
 
 
