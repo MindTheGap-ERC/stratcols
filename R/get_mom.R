@@ -14,6 +14,10 @@ get_mom.fa_tran_mat = function(m){
   #'
   ext_matrix = rbind(m,m)
   no_facies = ncol(m)
+
+  if (no_facies < 3){
+    stop("need more than 2 facies to determine markov order metric")
+  }
   max = -Inf
   min = Inf
   for (i in 1:(no_facies - 1)){
