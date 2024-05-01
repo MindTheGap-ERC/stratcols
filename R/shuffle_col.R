@@ -1,9 +1,10 @@
-shuffle_col = function(s, allow_rep = TRUE){
+shuffle_col = function(s, allow_rep = TRUE, max_no_swaps = 10^5){
   #' @export
   #' @title rearrange stratigraphic column
   #'
   #' @param s a stratcol object
   #' @param allow_rep logical. are repetitions in facies allowed?
+  #' @param max_no_swaps integer. if allow rep is FALSE, what is the number of permutations used to shuffle the column?
   #'
   #' @returns a stratcol object
   #'
@@ -11,7 +12,7 @@ shuffle_col = function(s, allow_rep = TRUE){
   UseMethod("shuffle_col")
 }
 
-shuffle_col.stratcol = function(s, allow_rep = TRUE){
+shuffle_col.stratcol = function(s, allow_rep = TRUE, max_no_swaps = 10^5){
   #' @export
   #'
   no_beds = stratcols::no_beds(s)
@@ -29,7 +30,19 @@ shuffle_col.stratcol = function(s, allow_rep = TRUE){
   }
   if (allow_rep == FALSE){
     stop("not implemented yet")
-    # max_steps = 10* length(s$fa)
+
+    no_b = no_beds(s)
+    for (i in seq_len(max_no_swaps)){
+      fa = facies_names(s)
+      ti = bed_thickness(s)
+      perm = sample.int(no_b, 2) # select two beds
+      fa[perm] = fa[rev(perm)]
+      thickness[perm] = thickness[rev(perm)]
+      s_temp = as_stratcol(thickness, fa)
+      if (!stratcols::facies_repetitions(s_temp)){
+        s = s_temp
+      }
+    }
     # thickness = diff(s$bdry)
     # fa = s$fa
     # for (i in seq_len(max_steps)){
