@@ -11,6 +11,7 @@ get_mom = function(m){
 
 get_mom.fa_tran_mat = function(m){
   #' @export
+  #'
   ext_matrix = rbind(m,m)
   no_facies = ncol(m)
   max = -Inf

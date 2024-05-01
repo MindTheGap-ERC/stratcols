@@ -69,3 +69,50 @@ hist(rom_vals,
 lines(x = rep(rom_observed, 2), y = c(0,n), col = "red")
 ```
 Here the red line indicates how extreme the rom value of the stratigraphic column `s` is compared to the expected distribution of rom values based on random reordering of the beds.
+
+## Estimating Markov Order Metrics
+To estimate markov order metrics, some data preparation is needed to make sure all assumptions on the encoding of the stratigraphic column are met. Let's start by defining an example stratigraphic column:
+
+```{r}
+set.seed(1)
+s = as_stratcol(thickness = runif(30), fa = rep(c(1,2,3), 10)) # uniform bed thickness, ordered facies
+s = shuffle_col(s, allow_rep = TRUE) # randomize order of beds, allowing  for repetitions
+plot(s)
+
+```
+
+### Check for successive beds with identical facies
+
+MOM only examines transitions between facies, and ignores beds with identical facies. To meet this criterion, we first need to merge all beds with identical facies:
+
+```{r}
+s_merged = merge_beds(s, mode = "identical facies")
+plot(s_merged)
+```
+### Rearrange facies names
+
+The next assumption is that facies are enumerated using integers based on their order of appearance in the column. We can do this using `order_facies_names`:
+
+```{r}
+s_ord_names = order_facies_names(s_merged)
+plot(s_ord_names)
+```
+### estimating the transition matrix
+
+Now we can estimate the facies transition matrix:
+
+```{r}
+m = transition_matrix(s_ord_names)
+m
+```
+
+Note that because we have merged beds with identical facies, entries on the diagonal are 0 - facies do not transition into themselves.
+
+### Estimating MOM 
+
+From the facies transition matrix, MOM can be estimated via
+
+```{r}
+get_mom(m)
+```
+A MOM  value of 0 indicates unordered facies, a value of 1 reflects perfect order and deterministic transitions between facies.
