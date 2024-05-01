@@ -15,8 +15,8 @@ order_facies_names = function(s){
 
 order_facies_names.stratcol = function(s){
   #' @export
-  old_names = unique(s$fa)
-  no_facies = length(old_names)
+  old_names = stratcols::unique_facies_names(s)
+  no_facies = stratcols::no_facies(s)
   new_names = seq_len(no_facies)
 
   new_s = stratcols::rename_facies(s, new_names = new_names, old_names = old_names)
