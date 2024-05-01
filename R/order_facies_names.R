@@ -10,7 +10,7 @@ order_facies_names = function(s){
  #' @description
   #' enumeratrs the facies according to their order of appearance (counting from the bottom of the section). To be applied to stratigraphic columns before get_mom is called
   #'
-   UseMethod("stratcol")
+   UseMethod("order_facies_names")
 }
 
 order_facies_names.stratcol = function(s){
