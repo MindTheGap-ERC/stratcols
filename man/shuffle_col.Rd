@@ -4,12 +4,14 @@
 \alias{shuffle_col}
 \title{rearrange stratigraphic column}
 \usage{
-shuffle_col(s, allow_rep = TRUE)
+shuffle_col(s, allow_rep = TRUE, max_no_swaps = 10^5)
 }
 \arguments{
 \item{s}{a stratcol object}
 
 \item{allow_rep}{logical. are repetitions in facies allowed?}
+
+\item{max_no_swaps}{integer. if allow rep is FALSE, what is the number of permutations used to shuffle the column?}
 }
 \value{
 a stratcol object
