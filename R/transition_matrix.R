@@ -4,7 +4,7 @@ transition_matrix = function(s){
   #'
   #' @param s stratcol object
   #'
-  #' @returns a matrix
+  #' @returns a matrix of S3 class fa_tran_mat (facies transition matrix). Has dimension names "from" and "to", and facies as row/column names.
   #'
 
   UseMethod("transition_matrix")
@@ -13,14 +13,15 @@ transition_matrix = function(s){
 transition_matrix.stratcol = function(s){
   #' @export
   #'
-  n = length(unique(s$fa))
+  n = stratcols::no_facies(s)
   m = matrix(0, ncol = n, nrow = n)
-  for (l in seq_len(length(s$fa)-1)){
+  fa = stratcols::unique_facies_names(s)
+  no_bed = stratcols::no_beds(s)
+  dimnames(m) = list("to" = fa, "from" = fa)
+  for (l in seq_len(no_bed-1)){
     i = s$fa[l]
     j = s$fa[l+1]
-    if (i != j){
-      m[j,i] = m[j,i] + 1
-    }
+    m[j,i] = m[ j, i] + 1
   }
   for (k in seq_len(n)){
     m[k,] = m[k,] /sum(m[k,])

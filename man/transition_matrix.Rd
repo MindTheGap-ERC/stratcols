@@ -10,7 +10,7 @@ transition_matrix(s)
 \item{s}{stratcol object}
 }
 \value{
-a matrix
+a matrix of S3 class fa_tran_mat (facies transition matrix). Has dimension names "from" and "to", and facies as row/column names.
 }
 \description{
 estimate transition matrix from strat column
