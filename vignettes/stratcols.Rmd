@@ -88,7 +88,7 @@ The optional argument `old_names` can be used to replace specific facies.
 
 See also
 
-```{r}
+```{r, eval=FALSE}
 vignette("stratcols_doc")
 ```
 

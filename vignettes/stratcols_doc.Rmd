@@ -38,7 +38,7 @@ The S3 class `stratcol` represents a simple **strat**igraphic **col**umn. Struct
 
 The fields have the following constraints: `fa` must have exactly one element less than `bdry`. `bdry` must have at least 2 elements.
 
-####  Construction
+#### Construction
 
 The following functions construct `stratcol` objects:
 
@@ -92,7 +92,7 @@ The following functions transform `stratcol` objects:
 
 See also
 
-```{r}
+```{r, eval=FALSE}
 vignette("stratcols")
 ```
 
