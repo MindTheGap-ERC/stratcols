@@ -83,3 +83,13 @@ s2 = rename_facies(s, new_names = c(2,3))
 plot(s2)
 ```
 The optional argument `old_names` can be used to replace specific facies.
+
+## Further reading
+
+See also
+
+```{r}
+vignette("stratcols_doc")
+```
+
+for an explanation of the larger structure of the package and definitions of the classes.

@@ -1,0 +1,99 @@
+---
+title: "Structure and classes of the admtools package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{stratcols_doc}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(stratcols)
+```
+
+## Introduction
+
+This vignette provides an overview of the structure of the `stratcols` package and the classes used therein.
+
+## S3 classes
+
+### S3 class `stratcol`
+
+#### Description
+
+The S3 class `stratcol` represents a simple **strat**igraphic **col**umn. Structurally, they are lists with 3 fields:
+
+-   `bdry` : numeric vector, boundary of beds or units in the stratigraphic column
+
+-   `fa` : vector, facies names of the beds
+
+-   `L_unit` : `NULL` or a string, length unit of the bed thickness
+
+The fields have the following constraints: `fa` must have exactly one element less than `bdry`. `bdry` must have at least 2 elements.
+
+####  Construction
+
+The following functions construct `stratcol` objects:
+
+-   `as_stratcol` : standard constructor
+
+#### Logic
+
+The following functions examine the logic of `stratcol` objects:
+
+-   `is_stratcol` : is an object a valid `stratcol` object?
+
+#### Representation
+
+-   `plot.stratcol` for basic plotting. Wraps the `StratigrapheR` package.
+
+#### Modification
+
+The following functions modify existing `stratcol` objects:
+
+-   `set_L_unit` to set length unit
+
+#### Extracting information
+
+The following functions extract information from `stratcol` objects:
+
+-   `bed_thickness`
+
+-   `facies_names` : get facies names of all beds
+
+-   `facies_repetitions` : are there successive beds with identical facies?
+
+-   `get_base` : position of lowest bed boundary
+
+-   `get_L_unit` : extract length unit
+
+-   `merge_beds` : combine beds in stratigraphic column
+
+-   `no_beds` : number of beds in column
+
+-   `no_facies` number of distinct facies in column
+
+-   `unique_facies_names` : get unique names of facies
+
+#### Transformation
+
+The following functions transform `stratcol` objects:
+
+-   `rename_facies` : change facies names
+
+## Further reading
+
+See also
+
+```{r}
+vignette("stratcols")
+```
+
+for a standard workflow and usage.
