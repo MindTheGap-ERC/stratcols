@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   stratcols_doc: stratcols_doc.html
   stratcols: stratcols.html
-last_built: 2024-05-02T11:11Z
+last_built: 2024-05-02T11:12Z
 urls:
   reference: https://mindthegap-erc.github.io/stratcols/reference
   article: https://mindthegap-erc.github.io/stratcols/articles
