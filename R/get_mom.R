@@ -9,7 +9,7 @@ get_mom = function(m){
   UseMethod("get_mom")
 }
 
-get_mom.fa_tran_mat = function(m){
+get_mom.fa_tran_mat_p = function(m){
   #' @export
   #'
   ext_matrix = rbind(m,m)
