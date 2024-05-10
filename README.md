@@ -2,7 +2,7 @@
 
   [![R-CMD-check](https://github.com/MindTheGap-ERC/stratcols/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MindTheGap-ERC/stratcols/actions/workflows/R-CMD-check.yaml)
 
-Dealing with stratigraphic columns in R. Currently provides simple wrappers and utility functions.
+Handling stratigraphic columns in R.
 
 ## Authors
 
