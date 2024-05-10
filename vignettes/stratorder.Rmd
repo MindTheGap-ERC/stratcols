@@ -116,3 +116,15 @@ From the facies transition matrix, MOM can be estimated via
 get_mom(m)
 ```
 A MOM  value of 0 indicates unordered facies, a value of 1 reflects perfect order and deterministic transitions between facies.
+
+## Further reading
+
+See also
+
+```{r, eval=FALSE}
+
+vignette("stratorder_doc")
+
+```
+
+for a description of the classes used in the package and a description of the larger scale strucure.
