@@ -78,19 +78,24 @@
 <div class="section level2">
 <h2 id="introduction-to-the-stratcols-package">Introduction to the stratcols package<a class="anchor" aria-label="anchor" href="#introduction-to-the-stratcols-package"></a>
 </h2>
-<p><code>stratcols</code> is a package with utility functions to handle
-stratigraphic columns.</p>
+<p><code>stratcols</code> is an R package to handle stratigraphic
+columns.</p>
 </div>
 <div class="section level2">
 <h2 id="getting-started">Getting started<a class="anchor" aria-label="anchor" href="#getting-started"></a>
 </h2>
-<p>Stratigraphic columns are defined using <code>as_stratcol</code>:</p>
+<p>Stratigraphic columns are constructed using
+<code>as_stratcol</code>:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">thickness</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html" class="external-link">runif</a></span><span class="op">(</span><span class="fl">10</span><span class="op">)</span> <span class="co">#bed thicknesses</span></span>
 <span><span class="va">facies</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span>, <span class="fl">5</span><span class="op">)</span> <span class="co"># facies codes</span></span>
 <span></span>
 <span><span class="va">s</span> <span class="op">=</span> <span class="fu"><a href="../reference/as_stratcol.html">as_stratcol</a></span><span class="op">(</span>thickness <span class="op">=</span> <span class="va">thickness</span>,</span>
 <span>                facies <span class="op">=</span> <span class="va">facies</span><span class="op">)</span></span></code></pre></div>
+<p>The optional argument <code>L_unit</code> can be used to associate a
+length unit with the bed thicknesses. The optional argument
+<code>base</code> specifies the position of the base of the lowest
+bed.</p>
 <p><code>is_stratcol</code> can be used to test if any object is a valid
 stratigraphic column:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
@@ -110,10 +115,13 @@ stratigraphic column:</p>
 <span><span class="co">#&gt; [1] 1 2</span></span></code></pre></div>
 <p>Further functionality includes</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/no_beds.html">no_beds</a></span><span class="op">(</span><span class="va">s</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/no_beds.html">no_beds</a></span><span class="op">(</span><span class="va">s</span><span class="op">)</span> <span class="co"># number of beds</span></span>
 <span><span class="co">#&gt; [1] 10</span></span>
-<span><span class="fu"><a href="../reference/no_facies.html">no_facies</a></span><span class="op">(</span><span class="va">s</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/no_facies.html">no_facies</a></span><span class="op">(</span><span class="va">s</span><span class="op">)</span> <span class="co"># number of distinct facies.</span></span>
 <span><span class="co">#&gt; [1] 2</span></span>
+<span></span>
+<span><span class="fu"><a href="../reference/total_thickness.html">total_thickness</a></span><span class="op">(</span><span class="va">s</span><span class="op">)</span> <span class="co"># total thickness of column</span></span>
+<span><span class="co">#&gt; [1] 4.439794</span></span>
 <span></span>
 <span><span class="fu"><a href="../reference/get_base.html">get_base</a></span><span class="op">(</span><span class="va">s</span><span class="op">)</span> <span class="co"># lowest bed boundary</span></span>
 <span><span class="co">#&gt; [1] 0</span></span>
@@ -123,18 +131,7 @@ stratigraphic column:</p>
 <span><span class="fu"><a href="../reference/facies_repetitions.html">facies_repetitions</a></span><span class="op">(</span><span class="va">s</span><span class="op">)</span> <span class="co"># do successive beds have identical facies?</span></span>
 <span><span class="co">#&gt; [1] FALSE</span></span>
 <span><span class="fu"><a href="../reference/merge_beds.html">merge_beds</a></span><span class="op">(</span><span class="va">s</span>, mode <span class="op">=</span> <span class="st">"identical facies"</span><span class="op">)</span> <span class="co"># merge successive beds with identical facies</span></span>
-<span><span class="co">#&gt; $bdry</span></span>
-<span><span class="co">#&gt;  [1] 0.00000000 0.08075014 0.91508317 1.51584406 1.67305250 1.68045194</span></span>
-<span><span class="co">#&gt;  [7] 2.14684544 2.64462283 2.93439007 3.66727206 4.43979357</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; $fa</span></span>
-<span><span class="co">#&gt;  [1] 1 2 1 2 1 2 1 2 1 2</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; $L_unit</span></span>
-<span><span class="co">#&gt; NULL</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; attr(,"class")</span></span>
-<span><span class="co">#&gt; [1] "stratcol"</span></span></code></pre></div>
+<span><span class="co">#&gt; Stratigraphic column</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="plotting-stratigraphic-columns">plotting stratigraphic columns<a class="anchor" aria-label="anchor" href="#plotting-stratigraphic-columns"></a>
@@ -155,12 +152,17 @@ stratigraphic columns. Facies types are interpreted as hardness</p>
 <p><img src="stratcols_files/figure-html/unnamed-chunk-8-1.png" width="700">
 The optional argument <code>old_names</code> can be used to replace
 specific facies.</p>
+<p>You can assign a stratigraphic column a length unit using</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">s3</span> <span class="op">=</span> <span class="fu"><a href="../reference/set_L_unit.html">set_L_unit</a></span><span class="op">(</span><span class="va">s</span>, <span class="st">"m"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/get_L_unit.html">get_L_unit</a></span><span class="op">(</span><span class="va">s3</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "m"</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="further-reading">Further reading<a class="anchor" aria-label="anchor" href="#further-reading"></a>
 </h2>
 <p>See also</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/vignette.html" class="external-link">vignette</a></span><span class="op">(</span><span class="st">"stratcols_doc"</span><span class="op">)</span></span></code></pre></div>
 <p>for an explanation of the larger structure of the package and
 definitions of the classes.</p>

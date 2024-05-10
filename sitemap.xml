@@ -58,10 +58,22 @@
     <loc>https://mindthegap-erc.github.io/stratcols/reference/plot.stratcol.html</loc>
   </url>
   <url>
+    <loc>https://mindthegap-erc.github.io/stratcols/reference/print.stratcol.html</loc>
+  </url>
+  <url>
     <loc>https://mindthegap-erc.github.io/stratcols/reference/rename_facies.html</loc>
   </url>
   <url>
     <loc>https://mindthegap-erc.github.io/stratcols/reference/set_L_unit.html</loc>
+  </url>
+  <url>
+    <loc>https://mindthegap-erc.github.io/stratcols/reference/summary.stratcol.html</loc>
+  </url>
+  <url>
+    <loc>https://mindthegap-erc.github.io/stratcols/reference/total_thickness.html</loc>
+  </url>
+  <url>
+    <loc>https://mindthegap-erc.github.io/stratcols/reference/total_thickness.stratcol.html</loc>
   </url>
   <url>
     <loc>https://mindthegap-erc.github.io/stratcols/reference/unique_facies_names.html</loc>
