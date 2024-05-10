@@ -1,12 +1,12 @@
 as_stratcol = function(thickness, facies, L_unit = NULL, base = 0){
   #' @export
   #'
-  #' @title define stratigraphic columns object
+  #' @title define stratigraphic column
   #'
-  #' @param thickness bed thicknesses
-  #' @param facies facies of beds
-  #' @param L_unit  SI unit of bed thickness
-  #' @param base position of lowest bed
+  #' @param thickness numeric vector, bed thicknesses
+  #' @param facies vector, facies code of beds
+  #' @param L_unit  length unit of bed thickness
+  #' @param base position of lowest bed boundary
   #'
   #' @description
     #' defines an S3 object `stratcol` representing a stratigraphic column.

@@ -2,18 +2,18 @@
 % Please edit documentation in R/as_stratcol.R
 \name{as_stratcol}
 \alias{as_stratcol}
-\title{define stratigraphic columns object}
+\title{define stratigraphic column}
 \usage{
 as_stratcol(thickness, facies, L_unit = NULL, base = 0)
 }
 \arguments{
-\item{thickness}{bed thicknesses}
+\item{thickness}{numeric vector, bed thicknesses}
 
-\item{facies}{facies of beds}
+\item{facies}{vector, facies code of beds}
 
-\item{L_unit}{SI unit of bed thickness}
+\item{L_unit}{length unit of bed thickness}
 
-\item{base}{position of lowest bed}
+\item{base}{position of lowest bed boundary}
 }
 \description{
 defines an S3 object \code{stratcol} representing a stratigraphic column.
