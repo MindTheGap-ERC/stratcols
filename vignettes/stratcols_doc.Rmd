@@ -53,6 +53,8 @@ The following functions examine the logic of `stratcol` objects:
 #### Representation
 
 -   `plot.stratcol` for basic plotting. Wraps the `StratigrapheR` package.
+-   `print.stratcol` for printing stratigraphic columns to the console
+-   `summary.stratcol` for printing a summary of a stratigraphic column to the console
 
 #### Modification
 
@@ -78,7 +80,9 @@ The following functions extract information from `stratcol` objects:
 
 -   `no_beds` : number of beds in column
 
--   `no_facies` number of distinct facies in column
+-   `no_facies`: number of distinct facies in column
+
+-   `total_thickness` : total thickness of column
 
 -   `unique_facies_names` : get unique names of facies
 
