@@ -10,7 +10,7 @@ is_stratcol(x)
 \item{x}{object to examine}
 }
 \description{
-examines if x is a valid stratcol object
+determines if x is a valid stratcol object
 }
 \seealso{
 \code{\link[=as_stratcol]{as_stratcol()}} to define stratcol objects

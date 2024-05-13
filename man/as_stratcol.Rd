@@ -15,8 +15,11 @@ as_stratcol(thickness, facies, L_unit = NULL, base = 0)
 
 \item{base}{position of lowest bed boundary}
 }
+\value{
+an object of S3 class \code{stratcol}
+}
 \description{
-defines an S3 object \code{stratcol} representing a stratigraphic column.
+defines an S3 object \code{stratcol} representing a stratigraphic column. Does not check for the validity of the constructed object. For this, use \code{is_stratcol}
 }
 \seealso{
 \code{\link[=is_stratcol]{is_stratcol()}} to check for validity

@@ -41,18 +41,21 @@ The optional argument `L_unit` can be used to associate a length unit with the b
 ```{r}
 is_stratcol(s)
 ```
+
 Bed thicknesses can be extracted using `bed_thickness`:
 
 ```{r}
 bed_thickness(s)
 
 ```
+
 You can extract (unique) facies names as follows:
 
 ```{r}
 facies_names(s)
 unique_facies_names(s)
 ```
+
 Further functionality includes
 
 ```{r}
@@ -67,8 +70,6 @@ get_L_unit(s) # length unit of beds
 facies_repetitions(s) # do successive beds have identical facies?
 merge_beds(s, mode = "identical facies") # merge successive beds with identical facies
 ```
-
-
 
 ## plotting stratigraphic columns
 
@@ -86,6 +87,7 @@ Facies names can be changed using `rename_facies`:
 s2 = rename_facies(s, new_names = c(2,3))
 plot(s2)
 ```
+
 The optional argument `old_names` can be used to replace specific facies.
 
 You can assign a stratigraphic column a length unit using
@@ -94,7 +96,6 @@ You can assign a stratigraphic column a length unit using
 s3 = set_L_unit(s, "m")
 get_L_unit(s3)
 ```
-
 
 ## Further reading
 
