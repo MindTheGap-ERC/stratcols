@@ -7,6 +7,12 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
+
 library(stratcols)
 
 test_check("stratcols")
+
+library(stratorder)
+
+test_check("stratorder")
+

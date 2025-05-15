@@ -1,0 +1,59 @@
+---
+title: "stratorder_doc"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{stratorder_doc}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(stratorder)
+```
+
+## Overview
+
+This vignette provides a large scale overview over the structure of the `stratorder` package.
+
+## S3 classes
+
+Here the S3 classes defined by the `stratorder` package are destribed.
+
+### fa_tran_mat_c
+
+#### Description
+
+`fa_tran_mant_p` is a facies transition matrix with raw transition counts. it is square with the number of unique facies as column and row size, and the dim names are "from" and "to". All entries are nonnegative integers, and the column/row names are the facies names.
+
+#### Construction
+
+via `trans_count_matrix`
+
+### fa_tran_mat_p
+
+#### Description
+
+`fa_tran_mat_p` is a **f**acies **tran**sition **mat**rix with transition **p**robabilities. It is a matrix with dimension names "from" and "to", and the facies names as column names. It specifies the transition probability/frequency between the facies.
+
+#### Construction
+
+Via `transition_matrix`.
+
+## Further reading
+
+See also
+
+```{r, eval=FALSE}
+
+vignette("stratorder")
+
+```
+
+for a standard workflow and usage.
