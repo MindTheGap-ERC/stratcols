@@ -1,4 +1,3 @@
-
 ^stratcols\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
@@ -7,9 +6,3 @@
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
-
-^stratorder\.Rproj$
-^\.Rproj\.user$
-^LICENSE\.md$
-^LICENSE$
-

@@ -3,11 +3,7 @@
 
   [![R-CMD-check](https://github.com/MindTheGap-ERC/stratcols/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MindTheGap-ERC/stratcols/actions/workflows/R-CMD-check.yaml)
 
-Handling stratigraphic columns in R.
-=======
-# stratorder
-
-Quantifying stratigraphic order using methods from Burgess (2016).
+Handling stratigraphic columns and quantifying stratigraphic order in R.
 
 
 ## Authors
@@ -38,11 +34,8 @@ remotes::install_github(repo = "MindTheGap-ERC/stratcols",
 
 After installation, you can load the package using
 
-to install the required `stratcols` package, and load it using using
-
-
-```R
-library("stratcols")
+```
+library(stratcols)
 ```
 
 
@@ -50,21 +43,6 @@ Start by reading the vignette, available via
 
 ```R
 vignette("stratcols")
-
-Then download the `stratorder` package using
-
-```R
-remotes::install_github(repo = "MindTheGap-ERC/stratorder",
-                        ref = "HEAD",
-                        dependencies = TRUE,
-                        build_vignettes = TRUE)
-```
-
-Start by looking at the vignette via
-
-```R
-vignette("stratorder")
-
 ```
 
 ## License
@@ -74,7 +52,6 @@ Apache 2.0, see LICENSE file for details
 ## Copyright
 
 Copyright 2024 Netherlands eScience Center and Utrecht University
-
 
 
 ## References
