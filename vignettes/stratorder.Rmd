@@ -16,20 +16,19 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(stratcols)
-library(stratorder)
 ```
 
 ## Introduction
 
-This is a basic introduction to the `stratorder` package
+This vignette describes how to quantify stratigraphic order.
 
 ## Setup
 
-First, we define a stratigraphic column using using the `stratcols` package:
+First, we define a stratigraphic column:
 
 ```{r}
 s = as_stratcol(thickness = runif(90), # random bed thicknesses
-                facies = rep(c(1,2,3), 30)) # repeat facies 1 and 2 
+                facies = rep(c(1,2,3), 30)) # repeat facies 1, 2 and 3 
 plot(s)
 ```
 
@@ -54,7 +53,8 @@ The run order metrics (ROM) can be estimated using
 rom_observed = get_rom(s)
 rom_observed
 ```
-to put this value into context, we randomize the section to estimate the distribution of rom values
+
+To put this value into context, we randomize the section to estimate the distribution of rom values
 
 ```{r}
 n = 10000
@@ -123,8 +123,8 @@ See also
 
 ```{r, eval=FALSE}
 
-vignette("stratorder_doc")
+vignette("stratcols_doc")
 
 ```
 
-for a description of the classes used in the package and a description of the larger scale strucure.
+for a description of the classes used in the package and a description of the larger scale structure.
