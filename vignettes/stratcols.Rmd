@@ -75,7 +75,7 @@ merge_beds(s, mode = "identical facies") # merge successive beds with identical 
 
 `stratcols` wraps `StratigrapheR` to plot stratigraphic columns. Facies types are interpreted as hardness
 
-```{r}
+```{r, fig.alt="Stratigraphic column"}
 plot(s)
 ```
 
@@ -83,7 +83,7 @@ plot(s)
 
 Facies names can be changed using `rename_facies`:
 
-```{r}
+```{r, fig.alt="stratigraphic column with changed facies codes"}
 s2 = rename_facies(s, new_names = c(2,3))
 plot(s2)
 ```
