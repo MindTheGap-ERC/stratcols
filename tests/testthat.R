@@ -11,8 +11,3 @@ library(testthat)
 library(stratcols)
 
 test_check("stratcols")
-
-library(stratorder)
-
-test_check("stratorder")
-
