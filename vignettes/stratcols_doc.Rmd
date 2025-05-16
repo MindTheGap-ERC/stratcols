@@ -1,8 +1,8 @@
 ---
-title: "Structure and classes of the admtools package"
+title: "Structure and classes of the stratcols package"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{stratcols_doc}
+  %\VignetteIndexEntry{Structure and classes of the stratcols package}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
