@@ -1,81 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/404.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/articles/stratcols.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/articles/stratcols_doc.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/as_stratcol.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/bed_thickness.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/facies_names.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/facies_repetitions.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/get_L_unit.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/get_base.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/is_stratcol.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/merge_beds.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/no_beds.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/no_facies.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/plot.stratcol.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/print.stratcol.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/rename_facies.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/set_L_unit.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/summary.stratcol.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/total_thickness.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/total_thickness.stratcol.html</loc>
-  </url>
-  <url>
-    <loc>https://mindthegap-erc.github.io/stratcols/reference/unique_facies_names.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://mindthegap-erc.github.io/stratcols/404.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/LICENSE-text.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/articles/index.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/articles/stratcols.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/articles/stratcols_doc.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/articles/stratorder.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/authors.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/index.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/as_stratcol.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/bed_thickness.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/facies_names.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/facies_repetitions.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/get_L_unit.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/get_base.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/get_mom.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/get_rom.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/index.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/is_stratcol.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/merge_beds.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/no_beds.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/no_facies.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/order_facies_names.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/plot.stratcol.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/print.stratcol.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/rename_facies.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/set_L_unit.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/shuffle_col.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/summary.stratcol.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/total_thickness.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/total_thickness.stratcol.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/trans_count_matrix.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/transition_matrix.html</loc></url>
+<url><loc>https://mindthegap-erc.github.io/stratcols/reference/unique_facies_names.html</loc></url>
 </urlset>
+
