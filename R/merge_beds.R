@@ -2,10 +2,14 @@ merge_beds = function(s, mode = "identical facies", ...){
   #' @export
   #' @title merge beds in stratigraphic column
   #'
-  #' @param s stratigraphic column
-  #' @param mode character. criteria for merging. currently onlye "identical facies" is implemented
-  #' @param ... other paratmeters. currently not used
-
+  #' @param s stratigraphic column (a `stratcol` object)
+  #' @param mode character. criteria for merging. currently only "identical facies" is implemented
+  #' @param ... other parameters. currently not used
+  #'
+  #' @examples
+    #' s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "sand", "shale", "shale"), L_unit = "m")
+    #' merge_beds(s, mode = "identical facies")
+    #' facies = facies_names(s) # returns "sand" "shale" as the two sandy beds are merged
   UseMethod("merge_beds")
 }
 

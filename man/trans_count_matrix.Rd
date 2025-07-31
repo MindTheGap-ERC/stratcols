@@ -4,10 +4,10 @@
 \alias{trans_count_matrix}
 \title{facies transition count matrix}
 \usage{
-trans_count_matrix(x, ...)
+trans_count_matrix(s, ...)
 }
 \arguments{
-\item{x}{stratigraphic column}
+\item{s}{stratigraphic column (a \code{stratcol} object)}
 
 \item{...}{other parameters. currently ignored}
 }
@@ -15,5 +15,13 @@ trans_count_matrix(x, ...)
 a transition count matrix of S3 class \code{fa_tran_mat_c}
 }
 \description{
-determines the number of facies transitons in a stratigraphic column and stores the output in a matrix
+determines the number of facies transitions in a stratigraphic column and stores the output in a matrix
+}
+\examples{
+#stratigraphic column with 90 beds
+s = as_stratcol(thickness = runif(90), facies = rep(c(1,2,3), 30))
+m = trans_count_matrix(s)
+}
+\seealso{
+\code{\link[=transition_matrix]{transition_matrix()}} for the facies transition matrix with transition frequencies
 }

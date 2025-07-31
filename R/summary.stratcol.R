@@ -1,12 +1,17 @@
 summary.stratcol = function(object, ...){
   #' @export
   #'
-  #' @title summary of stratigraphic column
+  #' @title summarize stratigraphic column
   #'
-  #' @param object stratigraphic column
-  #' @param ... further parameters (ignored)
+  #' @param object stratigraphic column (a `stratcol` object)
+  #' @param ... further parameters (currently ignored)
   #'
   #' @returns invisible NULL. prints to the console
+  #'
+  #' @examples
+    #' s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "shale"), L_unit = "m", base = 2)
+    #' summary(s)
+    #'
   #'
 
   cat("Stratigraphic column \n")

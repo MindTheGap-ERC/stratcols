@@ -4,10 +4,10 @@
 \alias{total_thickness.stratcol}
 \title{get total thickness of stratigraphic column}
 \usage{
-\method{total_thickness}{stratcol}(x, ...)
+\method{total_thickness}{stratcol}(s, ...)
 }
 \arguments{
-\item{x}{stratigraphic column}
+\item{s}{stratigraphic column}
 
 \item{...}{other parameters}
 }

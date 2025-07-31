@@ -2,16 +2,33 @@
 % Please edit documentation in R/get_mom.R
 \name{get_mom}
 \alias{get_mom}
-\title{determine markov order metric by Burgess (2016)}
+\title{Markov order metric by (Burgess 2016)}
 \usage{
 get_mom(m)
 }
 \arguments{
-\item{m}{facies transition matrix}
+\item{m}{a facies transition matrix}
 }
 \value{
-scalar, the matric order metric
+scalar, the Markov order metric introduced in Burgess (2016), https://doi.org/10.2110/jsr.2016.10
 }
 \description{
-determine markov order metric by Burgess (2016)
+Markov order metric by (Burgess 2016)
+}
+\examples{
+#see vignette for an extended example and explanation via
+# vignette("stratorder")
+# uniform bed thickness, ordered facies
+s = as_stratcol(thickness = runif(30), fa = rep(c(1,2,3), 10))
+s = shuffle_col(s, allow_rep = TRUE) # randomize order of beds, allowing  for repetitions
+plot(s)
+s_merged = merge_beds(s, mode = "identical facies")
+plot(s_merged)
+s_ord_names = order_facies_names(s_merged)
+plot(s_ord_names)
+m = transition_matrix(s_ord_names)
+get_mom(m)
+}
+\seealso{
+\code{\link[=transition_matrix]{transition_matrix()}} to estimate the facies transition matrix from a stratigraphic column, get_mom() to get the Markov order metric from a facies transition matrix, \code{\link[=get_rom]{get_rom()}} to get the runs order metric
 }

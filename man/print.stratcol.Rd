@@ -7,15 +7,20 @@
 \method{print}{stratcol}(x, ...)
 }
 \arguments{
-\item{x}{stratigraphic column}
+\item{x}{stratigraphic column (a \code{stratcol} object)}
 
-\item{...}{other parameters (ignored)}
+\item{...}{other parameters (currently ignored)}
 }
 \value{
 invisible NULL, prints to the console
 }
 \description{
 print stratigraphic column to console
+}
+\examples{
+s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "shale"), L_unit = "m")
+print(s)
+
 }
 \seealso{
 \code{\link[=summary.stratcol]{summary.stratcol()}} for a summary of a stratigraphic column

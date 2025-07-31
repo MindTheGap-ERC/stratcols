@@ -2,16 +2,21 @@
 % Please edit documentation in R/transition_matrix.R
 \name{transition_matrix}
 \alias{transition_matrix}
-\title{estimate transition matrix from strat column}
+\title{transition frequency matrix from strat. column}
 \usage{
 transition_matrix(s)
 }
 \arguments{
-\item{s}{stratcol object}
+\item{s}{stratigraphic column (a \code{stratcol} object)}
 }
 \value{
 a matrix of S3 class fa_tran_mat (facies transition matrix). Has dimension names "from" and "to", and facies as row/column names.
 }
 \description{
-estimate transition matrix from strat column
+transition frequency matrix from strat. column
+}
+\seealso{
+\code{\link[=trans_count_matrix]{trans_count_matrix()}} for the facies transition matrix with raw transition counts
+
+\code{\link[=get_mom]{get_mom()}} to get the Markov order of the transition matrix
 }

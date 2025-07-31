@@ -2,15 +2,22 @@
 % Please edit documentation in R/is_stratcol.R
 \name{is_stratcol}
 \alias{is_stratcol}
-\title{is valid stratigraphic column?}
+\title{is a valid stratigraphic column?}
 \usage{
 is_stratcol(x)
 }
 \arguments{
-\item{x}{object to examine}
+\item{x}{stratigraphic column (a \code{stratcol} object)}
 }
 \description{
 determines if x is a valid stratcol object
+}
+\examples{
+s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "shale"), L_unit = "m")
+is_stratcol(s) # returns TRUE
+s$fa = NULL # break stratcolumn object
+is_stratcol(s) # returns FALSE
+
 }
 \seealso{
 \code{\link[=as_stratcol]{as_stratcol()}} to define stratcol objects

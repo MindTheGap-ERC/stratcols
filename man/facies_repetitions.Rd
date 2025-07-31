@@ -2,16 +2,23 @@
 % Please edit documentation in R/facies_repetitions.R
 \name{facies_repetitions}
 \alias{facies_repetitions}
-\title{have successive beds identical facies}
+\title{have successive beds identical facies?}
 \usage{
 facies_repetitions(s)
 }
 \arguments{
-\item{s}{stratigraphic column}
+\item{s}{stratigraphic column (a \code{stratcol} object)}
 }
 \value{
-logical. Do two successive beds have the same facies?
+TRUE or FALSE. Do at least two successive beds have the same facies?
 }
 \description{
-have successive beds identical facies
+have successive beds identical facies?
+}
+\examples{
+s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "shale"), L_unit = "m")
+facies_repetitions(s) # returns FALSE
+s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "sand", "shale", "shale"), L_unit = "m")
+facies_repetitions(s) # returns TRUE
+
 }

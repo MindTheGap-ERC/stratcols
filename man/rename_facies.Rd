@@ -7,15 +7,20 @@
 rename_facies(s, new_names, old_names = NULL)
 }
 \arguments{
-\item{s}{stratcol object}
+\item{s}{stratigraphic column (a \code{stratcol} object)}
 
 \item{new_names}{new facies names}
 
 \item{old_names}{NULL or a list of old facies names. If NULL, all old facies names will be used}
 }
 \value{
-a stratcol object
+stratigraphic column (a \code{stratcol} object) with renamed facies
 }
 \description{
 replaces old facies names with new ones
+}
+\examples{
+s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "shale"), L_unit = "m")
+s = rename_facies(s, new_names = c("sandy", "shaly"))
+
 }

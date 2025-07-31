@@ -2,18 +2,29 @@
 % Please edit documentation in R/get_rom.R
 \name{get_rom}
 \alias{get_rom}
-\title{runs order metric by Burgess (2016)}
+\title{runs order metric (Burgess 2016)}
 \usage{
 get_rom(s, strictly = TRUE)
 }
 \arguments{
-\item{s}{stratigraphic column}
+\item{s}{stratigraphic column (a \code{stratcol} object)}
 
-\item{strictly}{logical. Does bed thickness need to be stricly increasing (>) or not (>=) to be counted as thickening?}
+\item{strictly}{logical. Does bed thickness need to be strictly increasing (>) or not (>=) to be counted as thickening?}
 }
 \value{
-scalar. The runs order metric (rom)
+a number, the runs order metric (rom)
 }
 \description{
-Determines the run order metric introduced by Burgess (2016), https://doi.org/10.2110/jsr.2016.10
+Determines the run order metric introduced in Burgess (2016), https://doi.org/10.2110/jsr.2016.10
+}
+\examples{
+#see vignette for an extended example, bootstrapping methods and explanation via
+# vignette("stratorder")
+s = as_stratcol(thickness = runif(90), facies = rep(c(1,2,3), 30))
+plot(s)
+get_rom(s) # returns a number, the runs order metric
+
+}
+\seealso{
+\code{\link[=get_mom]{get_mom()}} to get the Markov order metric
 }

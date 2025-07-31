@@ -7,13 +7,19 @@
 facies_names(s)
 }
 \arguments{
-\item{s}{a stratcol object}
+\item{s}{stratigraphic column (a \code{stratcol} object)}
 }
 \value{
-a vector of facies names for each bed
+vector of facies names for each bed
 }
 \description{
 extract facies names from stratigraphic column
+}
+\examples{
+s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "shale"), L_unit = "m")
+facies = facies_names(s)
+print(facies)
+
 }
 \seealso{
 \code{\link[=unique_facies_names]{unique_facies_names()}} to get a list of unique facies names

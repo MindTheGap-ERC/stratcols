@@ -7,15 +7,23 @@
 shuffle_col(s, allow_rep = TRUE, max_no_swaps = 10^5)
 }
 \arguments{
-\item{s}{a stratcol object}
+\item{s}{stratigraphic column (a \code{stratcol} object)}
 
-\item{allow_rep}{logical. are repetitions in facies allowed?}
+\item{allow_rep}{logical. Are repetitions in facies allowed?}
 
-\item{max_no_swaps}{integer. if allow rep is FALSE, what is the number of permutations used to shuffle the column?}
+\item{max_no_swaps}{integer. If allow rep is FALSE, what is the number of permutations used to shuffle the column?}
 }
 \value{
-a stratcol object
+a stratcol object, the rearranged stratigraphic column
 }
 \description{
 rearrange stratigraphic column
+}
+\examples{
+s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("clay", "shale", "sand", "shale"), L_unit = "m")
+s = shuffle_col(s, allow_rep = TRUE)
+facies_names(s) # returns a random permutation of the facies
+
+
+
 }

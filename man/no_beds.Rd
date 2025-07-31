@@ -2,16 +2,21 @@
 % Please edit documentation in R/no_beds.R
 \name{no_beds}
 \alias{no_beds}
-\title{determine number of beds}
+\title{number of beds}
 \usage{
 no_beds(s)
 }
 \arguments{
-\item{s}{stratigraphic column}
+\item{s}{stratigraphic column (a \code{stratcol} object)}
 }
 \value{
 integer, the number of beds
 }
 \description{
-determine number of beds
+number of beds
+}
+\examples{
+s =  as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "shale"), L_unit = "m")
+no_beds(s) # returns 4
+
 }

@@ -1,11 +1,15 @@
 no_beds = function(s){
   #' @export
   #'
-  #' @title determine number of beds
+  #' @title number of beds
   #'
-  #' @param s stratigraphic column
+  #' @param s stratigraphic column (a `stratcol` object)
   #'
   #' @returns integer, the number of beds
+  #'
+  #' @examples
+    #' s =  as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "shale"), L_unit = "m")
+    #' no_beds(s) # returns 4
   #'
   UseMethod("no_beds")
 }

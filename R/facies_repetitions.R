@@ -1,11 +1,17 @@
 facies_repetitions = function(s){
   #' @export
-  #' @title have successive beds identical facies
+  #' @title have successive beds identical facies?
   #'
-  #' @param s stratigraphic column
+  #' @param s stratigraphic column (a `stratcol` object)
   #'
-  #' @returns logical. Do two successive beds have the same facies?
+  #' @returns TRUE or FALSE. Do at least two successive beds have the same facies?
   #'
+  #' @examples
+    #' s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "shale"), L_unit = "m")
+    #' facies_repetitions(s) # returns FALSE
+    #' s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "sand", "shale", "shale"), L_unit = "m")
+    #' facies_repetitions(s) # returns TRUE
+    #'
 
   UseMethod("facies_repetitions")
 }

@@ -2,18 +2,24 @@
 % Please edit documentation in R/summary.stratcol.R
 \name{summary.stratcol}
 \alias{summary.stratcol}
-\title{summary of stratigraphic column}
+\title{summarize stratigraphic column}
 \usage{
 \method{summary}{stratcol}(object, ...)
 }
 \arguments{
-\item{object}{stratigraphic column}
+\item{object}{stratigraphic column (a \code{stratcol} object)}
 
-\item{...}{further parameters (ignored)}
+\item{...}{further parameters (currently ignored)}
 }
 \value{
 invisible NULL. prints to the console
 }
 \description{
-summary of stratigraphic column
+summarize stratigraphic column
+}
+\examples{
+s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "shale"), L_unit = "m", base = 2)
+summary(s)
+
+
 }

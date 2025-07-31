@@ -7,11 +7,18 @@
 bed_thickness(s)
 }
 \arguments{
-\item{s}{a \code{stratcol} object}
+\item{s}{stratigraphic column (a \code{stratcol} object)}
 }
 \value{
-a numberic vector of bed thicknesses
+a numeric vector of bed thicknesses
 }
 \description{
 extracts bed thicknesses from stratigraphic column
+}
+\examples{
+s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "shale"), L_unit = "m")
+thickness = bed_thickness(s)
+hist(thickness, main = "Bed thickness", xlab = paste0("Thickness (m)"))
+
+
 }

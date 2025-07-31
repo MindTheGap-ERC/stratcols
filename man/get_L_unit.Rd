@@ -7,11 +7,15 @@
 get_L_unit(s)
 }
 \arguments{
-\item{s}{stratigraphic columns}
+\item{s}{stratigraphic column (a \code{stratcol} object)}
 }
 \value{
-string or NULL, the lenght unit of the stratigraphic columns
+string or NULL, the length unit of the stratigraphic column
 }
 \description{
 extract length unit from stratigraphic columns
+}
+\examples{
+s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "shale"), L_unit = "m")
+get_L_unit(s) # returns "m"
 }

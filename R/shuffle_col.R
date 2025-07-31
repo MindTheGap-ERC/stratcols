@@ -2,11 +2,17 @@ shuffle_col = function(s, allow_rep = TRUE, max_no_swaps = 10^5){
   #' @export
   #' @title rearrange stratigraphic column
   #'
-  #' @param s a stratcol object
-  #' @param allow_rep logical. are repetitions in facies allowed?
-  #' @param max_no_swaps integer. if allow rep is FALSE, what is the number of permutations used to shuffle the column?
+  #' @param s stratigraphic column (a `stratcol` object)
+  #' @param allow_rep logical. Are repetitions in facies allowed?
+  #' @param max_no_swaps integer. If allow rep is FALSE, what is the number of permutations used to shuffle the column?
   #'
-  #' @returns a stratcol object
+  #' @returns a stratcol object, the rearranged stratigraphic column
+  #'
+  #' @examples
+    #' s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("clay", "shale", "sand", "shale"), L_unit = "m")
+    #' s = shuffle_col(s, allow_rep = TRUE)
+    #' facies_names(s) # returns a random permutation of the facies
+    #'
   #'
   #'
   UseMethod("shuffle_col")

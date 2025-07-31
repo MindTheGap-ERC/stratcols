@@ -4,16 +4,22 @@
 \alias{total_thickness}
 \title{get total thickness}
 \usage{
-total_thickness(x, ...)
+total_thickness(s, ...)
 }
 \arguments{
-\item{x}{object}
+\item{s}{stratigraphic column (a \code{stratcol} object)}
 
-\item{...}{other parameters}
+\item{...}{other parameters (currently ignored)}
 }
 \value{
-scalar. total thickness
+scalar, total thickness of stratigraphic column
 }
 \description{
 get total thickness
+}
+\examples{
+s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "shale"), L_unit = "m")
+total_thickness(s) # returns 2.5
+
+
 }

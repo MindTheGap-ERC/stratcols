@@ -7,7 +7,7 @@
 \method{plot}{stratcol}(x, ...)
 }
 \arguments{
-\item{x}{stratcol object}
+\item{x}{stratigraphic column (a \code{stratcol} object)}
 
 \item{...}{further plotting options. ignored}
 }
@@ -15,5 +15,10 @@
 invisible NULL
 }
 \description{
-basic plotting of stratigraphic columns
+wraps around \code{StratigrapheR::litholog()} to plot a stratigraphic column. The beds are plotted as polygons, the boundaries as horizontal lines.
+}
+\examples{
+s = as_stratcol(c(0.5, 1, 0.3, 0.7), c(1,2,3,1.5), L_unit = "m")
+# facies codes are used as hardness
+plot(s)
 }

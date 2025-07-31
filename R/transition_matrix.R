@@ -1,11 +1,13 @@
 transition_matrix = function(s){
   #' @export
-  #' @title estimate transition matrix from strat column
+  #' @title transition frequency matrix from strat. column
   #'
-  #' @param s stratcol object
+  #' @param s stratigraphic column (a `stratcol` object)
   #'
   #' @returns a matrix of S3 class fa_tran_mat (facies transition matrix). Has dimension names "from" and "to", and facies as row/column names.
+  #' @seealso [trans_count_matrix()] for the facies transition matrix with raw transition counts
   #'
+  #' @seealso [get_mom()] to get the Markov order of the transition matrix
 
   UseMethod("transition_matrix")
 }

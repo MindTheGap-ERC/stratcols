@@ -2,16 +2,20 @@
 % Please edit documentation in R/get_base.R
 \name{get_base}
 \alias{get_base}
-\title{find base of column}
+\title{find base of stratigraphic column}
 \usage{
 get_base(s)
 }
 \arguments{
-\item{s}{stratigraphic column}
+\item{s}{stratigraphic column (a \code{stratcol} object)}
 }
 \value{
-scalar. position of lowest bed boundary in the stratigraphic column
+A number, position of lowest bed boundary in the stratigraphic column
 }
 \description{
-find base of column
+find base of stratigraphic column
+}
+\examples{
+s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "shale"), L_unit = "m", base = 2)
+get_base(s) # returns 2
 }

@@ -9,7 +9,7 @@ as_stratcol(thickness, facies, L_unit = NULL, base = 0)
 \arguments{
 \item{thickness}{numeric vector, bed thicknesses}
 
-\item{facies}{vector, facies code of beds}
+\item{facies}{vector, facies code of beds (numeric or character)}
 
 \item{L_unit}{length unit of bed thickness}
 
@@ -20,6 +20,18 @@ an object of S3 class \code{stratcol}
 }
 \description{
 defines an S3 object \code{stratcol} representing a stratigraphic column. Does not check for the validity of the constructed object. For this, use \code{is_stratcol}
+}
+\examples{
+n_beds = 10
+# 10 beds with thickness between 0.1 and 1 m
+thickness = runif(n_beds, 0.1, 1)
+# alternations of sand and shale
+fa = rep(c("sand", "shale"), 5)
+# length unit
+L_unit = "m"
+base = 2   # start section at 2 m height
+s = as_stratcol(thickness, fa, L_unit, base)
+
 }
 \seealso{
 \code{\link[=is_stratcol]{is_stratcol()}} to check for validity

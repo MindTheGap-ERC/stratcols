@@ -2,15 +2,18 @@ rename_facies = function(s, new_names, old_names = NULL){
   #' @title rename facies
   #' @export
   #'
-  #' @param s stratcol object
+  #' @param s stratigraphic column (a `stratcol` object)
   #' @param new_names new facies names
   #' @param old_names NULL or a list of old facies names. If NULL, all old facies names will be used
   #'
   #' @description
     #' replaces old facies names with new ones
     #'
-  #' @returns a stratcol object
-  #'
+  #' @returns stratigraphic column (a `stratcol` object) with renamed facies
+  #' @examples
+    #' s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "shale"), L_unit = "m")
+    #' s = rename_facies(s, new_names = c("sandy", "shaly"))
+    #'
 
   UseMethod("rename_facies")
 }

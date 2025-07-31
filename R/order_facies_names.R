@@ -3,13 +3,17 @@ order_facies_names = function(s){
  #'
  #' @title order facies names according to appearance
  #'
- #' @param s a stratcol object
+ #' @param s stratigraphic column (a `stratcol` object)
  #'
- #' @returns a stratcol object
+ #' @returns a stratigraphic column (a `stratcol` object)
  #'
  #' @description
-  #' enumeratrs the facies according to their order of appearance (counting from the bottom of the section). To be applied to stratigraphic columns before get_mom is called
-  #'
+  #' enumerates the facies according to their order of appearance (counting from the bottom of the section). To be applied to stratigraphic columns before get_mom is called. Replaces the facies codes by integer numbers
+  #' @examples
+    #' s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "clay"), L_unit = "m")
+    #' s = order_facies_names(s)
+    #' plot(s)
+    #'
    UseMethod("order_facies_names")
 }
 

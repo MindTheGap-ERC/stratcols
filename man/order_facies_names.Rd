@@ -7,11 +7,17 @@
 order_facies_names(s)
 }
 \arguments{
-\item{s}{a stratcol object}
+\item{s}{stratigraphic column (a \code{stratcol} object)}
 }
 \value{
-a stratcol object
+a stratigraphic column (a \code{stratcol} object)
 }
 \description{
-enumeratrs the facies according to their order of appearance (counting from the bottom of the section). To be applied to stratigraphic columns before get_mom is called
+enumerates the facies according to their order of appearance (counting from the bottom of the section). To be applied to stratigraphic columns before get_mom is called. Replaces the facies codes by integer numbers
+}
+\examples{
+s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "clay"), L_unit = "m")
+s = order_facies_names(s)
+plot(s)
+
 }

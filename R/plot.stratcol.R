@@ -3,11 +3,16 @@ plot.stratcol = function(x, ...){
   #'
   #' @title basic plotting of stratigraphic columns
   #'
-  #' @param x stratcol object
+  #' @param x stratigraphic column (a `stratcol` object)
   #' @param ... further plotting options. ignored
   #'
   #' @returns invisible NULL
   #'
+  #' @description wraps around `StratigrapheR::litholog()` to plot a stratigraphic column. The beds are plotted as polygons, the boundaries as horizontal lines.
+  #' @examples
+    #' s = as_stratcol(c(0.5, 1, 0.3, 0.7), c(1,2,3,1.5), L_unit = "m")
+    #' # facies codes are used as hardness
+    #' plot(s)
 
 
  lilog = StratigrapheR::litholog(l = x$bdry[1:(length(x$bdry) - 1)],
