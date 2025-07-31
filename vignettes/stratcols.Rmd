@@ -67,13 +67,13 @@ total_thickness(s) # total thickness of column
 get_base(s) # lowest bed boundary
 get_L_unit(s) # length unit of beds
 
-facies_repetitions(s) # do successive beds have identical facies?
+facies_repetitions(s) # do at least two successive beds have identical facies?
 merge_beds(s, mode = "identical facies") # merge successive beds with identical facies
 ```
 
-## plotting stratigraphic columns
+## Plotting stratigraphic columns
 
-`stratcols` wraps `StratigrapheR` to plot stratigraphic columns. Facies types are interpreted as hardness
+`stratcols` wraps `StratigrapheR` to plot stratigraphic columns. Facies codes are interpreted as hardness
 
 ```{r, fig.alt="Stratigraphic column"}
 plot(s)
@@ -99,10 +99,18 @@ get_L_unit(s3)
 
 ## Further reading
 
-See also
+See
 
 ```{r, eval=FALSE}
 vignette("stratcols_doc")
 ```
 
 for an explanation of the larger structure of the package and definitions of the classes.
+
+See
+
+```{r, eval=FALSE}
+vignette("stratorder")
+```
+
+for available methods to estimate stratigraphic order metrics, such as the runs order metric (ROM) and the Markov order metric (MOM).

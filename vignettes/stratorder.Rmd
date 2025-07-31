@@ -20,7 +20,7 @@ library(stratcols)
 
 ## Introduction
 
-This vignette describes how to quantify stratigraphic order.
+This vignette describes how to quantify stratigraphic order using the metrics defined by Burgess (2016).
 
 ## Setup
 
@@ -128,3 +128,15 @@ vignette("stratcols_doc")
 ```
 
 for a description of the classes used in the package and a description of the larger scale structure.
+
+See
+
+```{r, eval=FALSE}  
+vignette("stratcols")
+```
+
+for an overview of the available functionalit of the `stratcols` package, including how to create stratigraphic columns, plot them and modify them.
+
+## References
+
+* Burgess, Peter. 2016. "Identifying Ordered Strata: Evidence, Methods, and Meaning." Journal of Sedimentary Research. \doi{10.2110/jsr.2016.10}

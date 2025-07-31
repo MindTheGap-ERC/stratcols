@@ -1,6 +1,6 @@
 get_mom = function(m){
   #' @export
-  #' @title Markov order metric by (Burgess 2016)
+  #' @title Markov order metric (Burgess 2016)
   #'
   #' @param m a facies transition matrix
   #'

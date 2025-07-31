@@ -121,4 +121,13 @@ See also
 vignette("stratcols")
 ```
 
-for a standard workflow and usage.
+for an overview of the available functionalit of the `stratcols` package, including how to create stratigraphic columns, plot them and modify them.
+
+See
+
+```{r, eval=FALSE}
+vignette("stratorder")
+```
+
+for available methods to estimate stratigraphic order metrics, such as the runs order metric (ROM) and the Markov order metric (MOM).
+

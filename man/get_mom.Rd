@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_mom.R
 \name{get_mom}
 \alias{get_mom}
-\title{Markov order metric by (Burgess 2016)}
+\title{Markov order metric (Burgess 2016)}
 \usage{
 get_mom(m)
 }
@@ -13,7 +13,7 @@ get_mom(m)
 scalar, the Markov order metric introduced in Burgess (2016), https://doi.org/10.2110/jsr.2016.10
 }
 \description{
-Markov order metric by (Burgess 2016)
+Markov order metric (Burgess 2016)
 }
 \examples{
 #see vignette for an extended example and explanation via
