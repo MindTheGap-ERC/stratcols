@@ -51,22 +51,33 @@
 
 
 <dl><dt id="arg-s">s<a class="anchor" aria-label="anchor" href="#arg-s"></a></dt>
-<dd><p>a stratcol object</p></dd>
+<dd><p>stratigraphic column (a <code>stratcol</code> object)</p></dd>
 
 
 <dt id="arg-allow-rep">allow_rep<a class="anchor" aria-label="anchor" href="#arg-allow-rep"></a></dt>
-<dd><p>logical. are repetitions in facies allowed?</p></dd>
+<dd><p>logical. Are repetitions in facies allowed?</p></dd>
 
 
 <dt id="arg-max-no-swaps">max_no_swaps<a class="anchor" aria-label="anchor" href="#arg-max-no-swaps"></a></dt>
-<dd><p>integer. if allow rep is FALSE, what is the number of permutations used to shuffle the column?</p></dd>
+<dd><p>integer. If allow rep is FALSE, what is the number of permutations used to shuffle the column?</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>a stratcol object</p>
+    <p>a stratcol object, the rearranged stratigraphic column</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">s</span> <span class="op">=</span> <span class="fu"><a href="as_stratcol.html">as_stratcol</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">1</span>, <span class="fl">0.3</span>, <span class="fl">0.7</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"clay"</span>, <span class="st">"shale"</span>, <span class="st">"sand"</span>, <span class="st">"shale"</span><span class="op">)</span>, L_unit <span class="op">=</span> <span class="st">"m"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">s</span> <span class="op">=</span> <span class="fu">shuffle_col</span><span class="op">(</span><span class="va">s</span>, allow_rep <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="facies_names.html">facies_names</a></span><span class="op">(</span><span class="va">s</span><span class="op">)</span> <span class="co"># returns a random permutation of the facies</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "sand"  "clay"  "shale" "shale"</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 
