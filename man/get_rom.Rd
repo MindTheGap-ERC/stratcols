@@ -25,6 +25,9 @@ plot(s)
 get_rom(s) # returns a number, the runs order metric
 
 }
+\references{
+Burgess, Peter. 2016. "Identifying Ordered Strata: Evidence, Methods, and Meaning." Journal of Sedimentary Research. \doi{10.2110/jsr.2016.10}
+}
 \seealso{
 \code{\link[=get_mom]{get_mom()}} to get the Markov order metric
 }

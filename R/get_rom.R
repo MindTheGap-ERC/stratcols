@@ -12,6 +12,7 @@ get_rom = function(s, strictly = TRUE){
   #' @returns a number, the runs order metric (rom)
   #'
   #' @seealso [get_mom()] to get the Markov order metric
+  #' @references  Burgess, Peter. 2016. "Identifying Ordered Strata: Evidence, Methods, and Meaning." Journal of Sedimentary Research. \doi{10.2110/jsr.2016.10}
   #'
   #' @examples
     #' #see vignette for an extended example, bootstrapping methods and explanation via

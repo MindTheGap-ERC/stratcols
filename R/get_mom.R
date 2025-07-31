@@ -6,7 +6,9 @@ get_mom = function(m){
   #'
   #' @returns scalar, the Markov order metric introduced in Burgess (2016), https://doi.org/10.2110/jsr.2016.10
   #'
-  #' @seealso [transition_matrix()] to estimate the facies transition matrix from a stratigraphic column, get_mom() to get the Markov order metric from a facies transition matrix, [get_rom()] to get the runs order metric
+  #' @seealso [transition_matrix()] to estimate the facies transition matrix from a stratigraphic column, [get_rom()] to get the runs order metric
+  #'
+  #' @references  Burgess, Peter. 2016. "Identifying Ordered Strata: Evidence, Methods, and Meaning." Journal of Sedimentary Research. \doi{10.2110/jsr.2016.10}
   #'
   #' @examples
     #' #see vignette for an extended example and explanation via

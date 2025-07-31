@@ -29,6 +29,9 @@ plot(s_ord_names)
 m = transition_matrix(s_ord_names)
 get_mom(m)
 }
+\references{
+Burgess, Peter. 2016. "Identifying Ordered Strata: Evidence, Methods, and Meaning." Journal of Sedimentary Research. \doi{10.2110/jsr.2016.10}
+}
 \seealso{
-\code{\link[=transition_matrix]{transition_matrix()}} to estimate the facies transition matrix from a stratigraphic column, get_mom() to get the Markov order metric from a facies transition matrix, \code{\link[=get_rom]{get_rom()}} to get the runs order metric
+\code{\link[=transition_matrix]{transition_matrix()}} to estimate the facies transition matrix from a stratigraphic column, \code{\link[=get_rom]{get_rom()}} to get the runs order metric
 }
