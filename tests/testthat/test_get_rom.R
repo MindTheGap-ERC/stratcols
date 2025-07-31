@@ -6,6 +6,7 @@ test_that("results match for tickening and thinning sections", {
 
   s = stratcols::as_stratcol(thickness = rev(seq_len(no_beds)), facies = seq_len(no_beds))
   expect_equal(get_rom(s), sum(seq_len(no_transitions))/(no_transitions))
+  expect_equal(get_rom(s, strictly = TRUE), sum(seq_len(no_transitions))/(no_transitions))
 
 })
 
@@ -15,4 +16,5 @@ test_that("results match for alternating bed thicknesses", {
   s = stratcols::as_stratcol(thickness = rep(c(1,2), no_beds)[seq_len(no_beds)],
                   facies = rep(1, no_beds))
   expect_equal(get_rom(s), 1)
+  expect_equal(get_rom(s, strictly = FALSE), 1)
 })

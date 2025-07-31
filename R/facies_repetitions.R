@@ -18,7 +18,7 @@ facies_repetitions.stratcol = function(s){
   }
 
 fa = facies_names.stratcol(s)
-n = no_facies.stratcol(s)
+n = no_beds.stratcol(s)
 fa_s = fa[1:(n-1)]
 fa_e = fa[2:n]
 rep = any(fa_s == fa_e)
