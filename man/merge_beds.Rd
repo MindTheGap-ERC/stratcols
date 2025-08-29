@@ -13,6 +13,9 @@ merge_beds(s, mode = "identical facies", ...)
 
 \item{...}{other parameters. currently not used}
 }
+\value{
+a stratigraphic column (a \code{stratcol} object)
+}
 \description{
 merge beds in stratigraphic column
 }

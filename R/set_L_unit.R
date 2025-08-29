@@ -5,6 +5,8 @@ set_L_unit = function(s, L_unit){
   #' @param s stratigraphic column (a `stratcol` object)
   #' @param L_unit string or NULL, the length unit
   #'
+  #' @returns a stratigraphic column (`stratcol` object) with length unit added
+  #'
   #' @examples
     #' s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "shale"))
     #' s = set_L_unit(s, "m")

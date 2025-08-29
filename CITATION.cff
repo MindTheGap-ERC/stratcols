@@ -1,0 +1,38 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  stratcols: R Package for Stratigraphic Columns and Order
+  Metrics
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Niklas
+    family-names: Hohmann
+    email: N.H.Hohmann@uu.nl
+    affiliation: Utrecht University
+    orcid: 'https://orcid.org/0000-0003-1559-1838'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.16992030
+    description: v1.0.0
+  - type: doi
+    value: 10.5281/zenodo.16992029
+    description: latest version
+repository-code: 'https://github.com/MindTheGap-ERC/stratcols'
+url: 'https://mindthegap-erc.github.io/stratcols/'
+abstract: >-
+  Quantify stratigraphic disorder using the metrics defined
+  by Burgess (2016) <doi:10.2110/jsr.2016.10>. Contains a
+  range of utility tools to construct and manipulate
+  stratigraphic columns.
+keywords:
+  - stratigraphy
+  - geology
+  - markov metric
+license: Apache-2.0
+version: 1.0.0
+date-released: '2025-08-29'

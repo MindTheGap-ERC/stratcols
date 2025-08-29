@@ -1,0 +1,10 @@
+bibentry(
+  bibtype  = "misc",
+  title    = "stratcols: R Package for Stratigraphic Columns and Order Metrics",
+  author   = "Niklas Hohmann"
+  year     = 2025,
+  publisher = "Zenodo",
+  version = "v1.0.0",
+  doi = "10.5281/zenodo.16992030",
+  url = "https://doi.org/10.5281/zenodo.16992030"
+)

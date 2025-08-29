@@ -9,6 +9,8 @@ is_stratcol = function(x){
     #' determines if x is a valid stratcol object
     #'
   #'
+  #' @returns logical - is the object a valid stratcol object?
+  #'
   #' @seealso [as_stratcol()] to define stratcol objects
   #' @examples
     #' s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "shale", "sand", "shale"), L_unit = "m")

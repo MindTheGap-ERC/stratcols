@@ -11,6 +11,9 @@ set_L_unit(s, L_unit)
 
 \item{L_unit}{string or NULL, the length unit}
 }
+\value{
+a stratigraphic column (\code{stratcol} object) with length unit added
+}
 \description{
 set length unit of strat column
 }

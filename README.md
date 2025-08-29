@@ -53,6 +53,12 @@ Apache 2.0, see LICENSE file for details
 
 Copyright 2024 Netherlands eScience Center and Utrecht University
 
+## Citation
+
+To cite this repository, please use
+
+* Niklas Hohmann. (2025). MindTheGap-ERC/stratcols: stratcols 1.0.0 (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.16992030
+
 
 ## References
 

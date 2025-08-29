@@ -6,6 +6,8 @@ merge_beds = function(s, mode = "identical facies", ...){
   #' @param mode character. criteria for merging. currently only "identical facies" is implemented
   #' @param ... other parameters. currently not used
   #'
+  #' @returns a stratigraphic column (a `stratcol` object)
+  #'
   #' @examples
     #' s = as_stratcol(c(0.5, 1, 0.3, 0.7), c("sand", "sand", "shale", "shale"), L_unit = "m")
     #' merge_beds(s, mode = "identical facies")

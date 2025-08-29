@@ -9,6 +9,9 @@ is_stratcol(x)
 \arguments{
 \item{x}{stratigraphic column (a \code{stratcol} object)}
 }
+\value{
+logical - is the object a valid stratcol object?
+}
 \description{
 determines if x is a valid stratcol object
 }
