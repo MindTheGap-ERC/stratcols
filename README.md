@@ -1,7 +1,11 @@
 
 # stratcols
 
-  [![R-CMD-check](https://github.com/MindTheGap-ERC/stratcols/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MindTheGap-ERC/stratcols/actions/workflows/R-CMD-check.yaml)
+<!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/stratcols)](https://CRAN.R-project.org/package=stratcols)
+[![R-CMD-check](https://github.com/MindTheGap-ERC/stratcols/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/MindTheGap-ERC/stratcols/actions/workflows/R-CMD-check.yaml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16992030.svg)](https://doi.org/10.5281/zenodo.16992030)
+<!-- badges: end -->
 
 Handling stratigraphic columns and quantifying stratigraphic order in R.
 
