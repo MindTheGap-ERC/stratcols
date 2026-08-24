@@ -1,0 +1,135 @@
+# Structure and classes of the stratcols package
+
+``` r
+
+library(stratcols)
+```
+
+## Introduction
+
+This vignette provides an overview of the structure of the `stratcols`
+package and the classes used therein.
+
+## S3 classes
+
+### S3 class `stratcol`
+
+#### Description
+
+The S3 class `stratcol` represents a simple **strat**igraphic
+**col**umn. Structurally, they are lists with 3 fields:
+
+- `bdry` : numeric vector, boundary of beds or units in the
+  stratigraphic column
+
+- `fa` : vector, facies names of the beds
+
+- `L_unit` : `NULL` or a string, length unit of the bed thickness
+
+The fields have the following constraints: `fa` must have exactly one
+element less than `bdry`. `bdry` must have at least 2 elements.
+
+#### Construction
+
+The following functions construct `stratcol` objects:
+
+- `as_stratcol` : standard constructor
+
+#### Logic
+
+The following functions examine the logic of `stratcol` objects:
+
+- `is_stratcol` : is an object a valid `stratcol` object?
+
+#### Representation
+
+- `plot.stratcol` for basic plotting. Wraps the `StratigrapheR` package.
+- `print.stratcol` for printing stratigraphic columns to the console
+- `summary.stratcol` for printing a summary of a stratigraphic column to
+  the console
+
+#### Modification
+
+The following functions modify existing `stratcol` objects:
+
+- `set_L_unit` to set length unit
+
+#### Extracting information
+
+The following functions extract information from `stratcol` objects:
+
+- `bed_thickness`
+
+- `facies_names` : get facies names of all beds
+
+- `facies_repetitions` : are there successive beds with identical
+  facies?
+
+- `get_base` : position of lowest bed boundary
+
+- `get_L_unit` : extract length unit
+
+- `merge_beds` : combine beds in stratigraphic column
+
+- `no_beds` : number of beds in column
+
+- `no_facies`: number of distinct facies in column
+
+- `total_thickness` : total thickness of column
+
+- `unique_facies_names` : get unique names of facies
+
+#### Transformation
+
+The following functions transform `stratcol` objects:
+
+- `rename_facies` : change facies names
+
+### fa_tran_mat_c
+
+#### Description
+
+`fa_tran_mant_p` is a facies transition matrix with raw transition
+counts. it is square with the number of unique facies as column and row
+size, and the dim names are “from” and “to”. All entries are nonnegative
+integers, and the column/row names are the facies names.
+
+#### Construction
+
+via `trans_count_matrix`
+
+### fa_tran_mat_p
+
+#### Description
+
+`fa_tran_mat_p` is a **f**acies **tran**sition **mat**rix with
+transition **p**robabilities. It is a matrix with dimension names “from”
+and “to”, and the facies names as column names. It specifies the
+transition probability/frequency between the facies.
+
+#### Construction
+
+Via `transition_matrix`.
+
+## Further reading
+
+See also
+
+``` r
+
+vignette("stratcols")
+```
+
+for an overview of the available functionalit of the `stratcols`
+package, including how to create stratigraphic columns, plot them and
+modify them.
+
+See
+
+``` r
+
+vignette("stratorder")
+```
+
+for available methods to estimate stratigraphic order metrics, such as
+the runs order metric (ROM) and the Markov order metric (MOM).
