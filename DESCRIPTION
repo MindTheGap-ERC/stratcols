@@ -2,13 +2,15 @@ Package: stratcols
 Title: Stratigraphic Columns and Order Metrics
 Version: 1.0.0.9000
 Authors@R: 
-    person("Niklas", "Hohmann", , "N.H.Hohmann@uu.nl", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0003-1559-1838"))
+    c(person("Niklas", "Hohmann", , "N.H.Hohmann@uu.nl", role = c("aut"),
+           comment = c(ORCID = "0000-0003-1559-1838")),
+    person("Emilia", "Jarochowska", email = "e.jarochowska@uni-muenster.de", role = c("cre"),
+            comment= c(ORCID = "0000-0001-8937-9405"))) 
 Description: Quantify stratigraphic disorder using the metrics defined by Burgess (2016) <doi:10.2110/jsr.2016.10>. Contains a range of utility tools to construct and manipulate stratigraphic columns.
 License: Apache License (>= 2)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Imports: 
     StratigrapheR
 Suggests: 
