@@ -8,7 +8,11 @@ Handling stratigraphic columns and quantifying stratigraphic order in R.
 
 ## Authors
 
-__Niklas Hohmann__  
+__Emilia Jarochowska__ (maintainer)
+Universität Münster  
+ORCID: [0000-0001-8937-9405](https://orcid.org/0000-0001-8937-9405)
+
+__Niklas Hohmann__ (creator)  
 Utrecht University  
 email: n.hohmann [at] uu.nl  
 Web page: [uu.nl/staff/NHohmann](https://www.uu.nl/staff/NHHohmann)  
